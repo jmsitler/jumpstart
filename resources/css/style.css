@@ -65,42 +65,74 @@ h3 {
 /* Jumbotron */
 
 .jumbotron {
-  padding: 11.85rem 0;
+  height: 44rem;
+  padding-top: 10rem;
   text-align: center;
-  margin-top: 80px;
-}
-
-.jumbotron-container {
-  max-width: 51.3rem;
-  margin: 0 auto;
-}
-
-.jumbotron-bike {
-  background-image: url('../images/jumbotron-bike.jpg');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.jumbotron-head, .jumbotron p {
+  color: white;
   text-shadow:
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+  border-radius: 0;
 }
 
-.jumbotron-head {
-  font-family: 'Monoton';
+.background-bike {
+  background-image: url("../images/jumbotron-bike.jpg");
+}
+
+.background-beer {
+  background-image: url("../images/jumbotron-beer.jpg");
+}
+
+.background-flowers {
+  background-image: url("../images/jumbotron-flowers.jpg");
+}
+
+.background-duffel {
+  background-image: url("../images/jumbotron-duffel.jpg");
+}
+
+.jumbotron h1 {
+  font-family: "Monoton", sans-serif;
   font-size: 7.1rem;
-  color: #fff;
 }
 
 .jumbotron p {
-  color: #fff;
+  max-width: 51.3rem;
+  margin: auto;
   font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 2.8rem;
+}
+
+.relative-wrapper {
+  position: relative;
+  bottom: 11.85rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .jumbotron h1 {
+    font-size: 5.7rem;
+  }
+
+  .relative-wrapper {
+    bottom: 8rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .jumbotron h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Slick Overrides */
+div.slick-list {
+  top: 80px;
 }
 
 .btn-primary {
@@ -145,6 +177,12 @@ h3 {
 .image-container img {
   width: 100%;
   opacity: .7;
+  transition: all 0.5s;
+}
+
+.image-container img:hover {
+  opacity: 1;
+  transform: scale(1.3) rotate(7deg);
 }
 
 .container .featured-project .image-container {
@@ -161,15 +199,13 @@ h3 {
   margin-bottom: 5.85rem;
 }
 
-.projects .image-container
 
 /* Learn More */
-
-.learn-more  p {
-  padding-bottom: 2rem;
+.learn-more p {
   max-width: 42rem;
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 2rem;
 }
 
 footer {
